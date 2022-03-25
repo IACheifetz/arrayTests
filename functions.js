@@ -98,7 +98,10 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    const hungryArray = arr.map((pet) => ({ name: pet.name, [pet.isHungry]: true, type: pet.type }));
+    const hungryArray = arr.map((pet) => ({ 
+        name: pet.name, 
+        [pet.isHungry]: true, 
+        type: pet.type }));
 
     return hungryArray;
 }
@@ -129,7 +132,10 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    const stringArray = arr.map ((pet) => {
+        return `${pet.name}${pet.type}`;
+    });
+    return stringArray;
 }
 
 /*
