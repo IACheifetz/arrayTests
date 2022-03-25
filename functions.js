@@ -98,7 +98,9 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    const hungryArray = arr.map((pet) => ({ name: pet.name, [pet.isHungry]: true, type: pet.type }));
+
+    return hungryArray;
 }
 
 /*
@@ -112,7 +114,11 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shoutingArray = arr.map((pet) => {
+        return { name: pet.name.toUpperCase(), type: pet.type };
+    }
+    );
+    return shoutingArray;
 }
 
 
