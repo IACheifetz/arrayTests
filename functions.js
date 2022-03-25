@@ -18,7 +18,14 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    const nameArray = arr.filter((dog) => {
+        if(dog.type === 'dog') {
+            return true;
+        } else {
+            return false;
+        }
+    });
+    return nameArray;
 }
 
 /*
@@ -28,7 +35,10 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const petArray = arr.map((pet) => {
+        return pet.type, pet.name;
+    });
+    return petArray;
 }
 
 /*
@@ -37,7 +47,13 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    const petNameArray = arr.filter((pet) => {
+        if(pet.type === 'dog') {
+            return pet.name;
+        }
+    });
+
+    return petNameArray;
 }
 
 /*
@@ -76,7 +92,7 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-     return []
+    return [];
 }
 
 /*
