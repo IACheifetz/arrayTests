@@ -47,11 +47,9 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    const petNameArray = arr.filter((pet) => {
-        if(pet.type === 'dog') {
-            return pet.name;
-        }
-    });
+    const petNameArray = arr
+        .filter(pet => pet.type === 'dog')
+        .map(pet => pet.name);
 
     return petNameArray;
 }
@@ -63,7 +61,11 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const reverseArray = arr
+        .map(pet => pet.type)
+        .reverse();
+
+    return reverseArray;
 }
 
 /*
@@ -78,7 +80,11 @@ Output:
 */
 
 export function makeSpanishLanguageArray(arr) {
-    return [];
+    const spanishArray = arr.map((pet) => {
+        return { nombre: pet.name, tipo: pet.type };
+    });
+
+    return spanishArray;
 }
 
 /*
